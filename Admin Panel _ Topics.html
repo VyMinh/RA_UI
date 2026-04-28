@@ -1,0 +1,2286 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="csrf-token" content="qeXw7hDvpDPfoCgceiewf2lLTLiGoRJ5z5iyXE3N">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="https://s1.socialyze.asia/user-uploads/favicon/c5dc7dc3ca2142e83b56ddbb890d10a8.ico">
+    
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://s1.socialyze.asia/user-uploads/favicon/c5dc7dc3ca2142e83b56ddbb890d10a8.ico">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Admin Panel | Topics</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+    <!-- Bootstrap Core CSS -->
+    <link href="https://s1.socialyze.asia/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet prefetch'
+          href='https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css'>
+    <link rel='stylesheet prefetch'
+          href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/css/bootstrap-select.min.css'>
+
+    <!-- This is Sidebar menu CSS -->
+    <link href="https://s1.socialyze.asia/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+
+    <link href="https://s1.socialyze.asia/plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <link href="https://s1.socialyze.asia/plugins/bower_components/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <!-- This is a Animation CSS -->
+    <link href="https://s1.socialyze.asia/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://s1.socialyze.asia/plugins/bower_components/bootstrap-select/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://s1.socialyze.asia/plugins/bower_components/custom-select/custom-select.css">
+    <link rel="stylesheet" href="https://s1.socialyze.asia/plugins/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="https://s1.socialyze.asia/plugins/bower_components/clockpicker/dist/jquery-clockpicker.min.css">
+    <link rel="stylesheet" href="https://s1.socialyze.asia/plugins/bower_components/jquery-asColorPicker-master/css/asColorPicker.css">
+    <style>
+        .panel-black .panel-heading a,
+        .panel-inverse .panel-heading a {
+            color: unset!important;
+        }
+        .asColorPicker-wrap{
+            display: block;
+            width: fit-content;
+        }
+        .basic-form .box-input {
+            background-color: #eeeeee;
+            display: flex;
+            padding: 15px 0;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .basic-form .box-input .form-group {
+            margin-bottom: 0;
+        }
+        .topkw-input .bootstrap-tagsinput{
+            min-height: 100px;
+        }
+        .bootstrap-tagsinput .tag {
+            margin-bottom: 2px;
+            display: inline-flex !important;
+        }
+        .select2-container.select2-container-disabled {
+            background-color: #f4f4f4;
+        }
+    </style>
+    <style>
+        .panel-black .panel-heading a,
+        .panel-inverse .panel-heading a {
+            color: unset !important;
+        }
+
+        #thread-priority-config .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        #thread-priority-config .form-label {
+            min-width: 200px;
+            margin-right: 10px;
+        }
+
+        #thread-priority-config .form-group .form-control {
+            flex: 1;
+            min-width: 0;
+            margin-right: 5px;
+        }
+
+        #thread-priority-config .form-group .form-control:last-child {
+            margin-right: 0;
+        }
+
+        #thread-priority-config .form-group span {
+            flex-shrink: 0;
+            margin-right: 10px;
+        }
+    </style>
+
+            <!-- This is a Custom CSS -->
+
+    <link href="https://s1.socialyze.asia/css/style.css?t=1777363824" rel="stylesheet">
+    <!-- color CSS you can use different color css from css/colors folder -->
+    <!-- We have chosen the skin-blue (default.css) for this starter
+       page. However, you can choose any other skin from folder css / colors .
+       -->
+    <link href="https://s1.socialyze.asia/css/colors/default.css" id="theme" rel="stylesheet">
+    <link href="https://s1.socialyze.asia/plugins/froiden-helper/helper.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://s1.socialyze.asia/css/magnific-popup.css">
+    <link href="https://s1.socialyze.asia/css/custom-new.css?t=1777363824" rel="stylesheet">
+
+        <link href="https://s1.socialyze.asia/css/rounded.css" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="https://s1.socialyze.asia/css/checkbox.css">
+    <script src="https://s1.socialyze.asia/js/translations.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+        
+        <style>
+        :root {
+            --header_color: #ef538e;
+            --sidebar_color: #3b80c2;
+            --link_color: #ffffff;
+            --sidebar_text_color: rgb(255, 255, 255);
+        }
+
+        .pace .pace-progress {
+            background: var(--header_color);
+        }
+
+        .menu-footer,.menu-copy-right{
+            border-top: 1px solid #1778d3;
+            background: var(--sidebar_color);
+        }
+        .navbar-header {
+            background: var(--header_color);
+        }
+        .content-wrapper .sidebar #side-menu>li:hover{
+            background: var(--sidebar_color);
+        }
+        .sidebar-nav .notify {
+            margin: 0 !important;
+        }
+        .sidebar .notify .heartbit {
+            border: 5px solid var(--header_color) !important;
+            top: -23px !important;
+            right: -15px !important;
+        }
+        .sidebar .notify .point {
+            background-color: var(--header_color) !important;
+            top: -13px !important;
+        }
+
+        .navbar-top-links > li > a {
+            color: var(--link_color);
+        }
+        /*Right panel*/
+        .right-sidebar .rpanel-title {
+            background: var(--header_color);
+        }
+        /*Bread Crumb*/
+        .bg-title .breadcrumb .active {
+            color: var(--header_color);
+        }
+        /*Sidebar*/
+        .sidebar {
+            background: var(--sidebar_color);
+            box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+        }
+        .sidebar .label-custom {
+            background: var(--header_color);
+        }
+        #side-menu li a, #side-menu > li:not(.user-pro) > a {
+            color: var(--sidebar_text_color);
+            border-left: 0 solid var(--sidebar_color);
+        }
+        #side-menu > li > a:hover,
+        #side-menu > li > a:focus {
+            background: rgba(0, 0, 0, 0.07);
+        }
+        #side-menu > li > a.active {
+            /* border-left: 3px solid var(--header_color); */
+            color: var(--link_color);
+            background: var(--header_color);
+        }
+        #side-menu > li > a.active i {
+            color: var(--link_color);
+        }
+        #side-menu ul > li > a:hover {
+            color: var(--link_color);
+        }
+        #side-menu ul > li > a.active, #side-menu ul > li > a:hover {
+            color: var(--header_color);
+        }
+        .sidebar #side-menu .user-pro .nav-second-level a:hover {
+            color: var(--header_color);
+        }
+        .nav-small-cap {
+            color: var(--sidebar_text_color);
+        }
+        /* .content-wrapper .sidebar .nav-second-level li {
+            background: #444859;
+        }
+        @media (min-width: 768px) {
+            .content-wrapper #side-menu ul,
+            .content-wrapper .sidebar #side-menu > li:hover,
+            .content-wrapper .sidebar .nav-second-level > li > a {
+                background: #444859;
+            }
+        } */
+
+        /*themecolor*/
+        .bg-theme {
+            background-color: var(--header_color) !important;
+        }
+        .bg-theme-dark {
+            background-color: var(--sidebar_color) !important;
+        }
+        /*Chat widget*/
+        .chat-list .odd .chat-text {
+            /* background: var(--header_color); */
+        }
+        /*Button*/
+        .btn-custom {
+            background: var(--header_color);
+            border: 1px solid var(--header_color);
+            color: var(--link_color);
+        }
+        .btn-custom:hover {
+            background: var(--header_color);
+            border: 1px solid var(--header_color);
+        }
+        /*Custom tab*/
+        .customtab li.active a,
+        .customtab li.active a:hover,
+        .customtab li.active a:focus {
+            border-bottom: 2px solid var(--header_color);
+            color: var(--header_color);
+        }
+        .tabs-vertical li.active a,
+        .tabs-vertical li.active a:hover,
+        .tabs-vertical li.active a:focus {
+            background: var(--header_color);
+            border-right: 2px solid var(--header_color);
+        }
+        /*Nav-pills*/
+        .nav-pills > li.active > a,
+        .nav-pills > li.active > a:focus,
+        .nav-pills > li.active > a:hover {
+            background: var(--header_color);
+            color: var(--link_color);
+        }
+
+        .admin-panel-name{
+            background: var(--header_color);
+        }
+
+        /*fullcalendar css*/
+        .fc th.fc-widget-header{
+            background: var(--sidebar_color);
+        }
+
+        .fc-button{
+            background: var(--header_color);
+            color: var(--link_color);
+            margin-left: 2px !important;
+        }
+
+        .fc-unthemed .fc-today{
+            color: #757575 !important;
+        }
+
+        .user-pro{
+            background-color: var(--sidebar_color);
+        }
+
+        .top-left-part{
+            background: var(--sidebar_color);
+        }
+
+        .notify .heartbit{
+            border: 5px solid var(--sidebar_color);
+        }
+
+        .notify .point{
+            background-color: var(--sidebar_color);
+        }
+        .dropdown-menu.mailbox{
+            padding-top: 0;
+        }
+    </style>
+
+    <style>
+        
+    </style>
+        
+
+    <style>
+        .sidebar .notify  {
+        margin: 0 !important;
+        }
+        .sidebar .notify .heartbit {
+        top: -23px !important;
+        right: -15px !important;
+        }
+        .sidebar .notify .point {
+        top: -13px !important;
+        }
+        /* .content-wrapper .sidebar #side-menu>li>.active {
+            background: transparent;
+        }
+        .content-wrapper .sidebar #side-menu>li>.active:hover {
+            background: #272d36;
+        } */
+        #section-task {
+        padding-bottom: 0px;
+        }
+    </style>
+    <style>
+        .btn-primary:not(.btn-sm), .btn-custom, .btn-inverse, .btn-info:not(.btn_pinned, .fix_btn_discussion-category, .btn-rounded, .btn-circular, .btn-xs , .edit-members ), .btn-danger-theme:not(.btn-circle), .btn-default-theme:not(.btn-circle), .btn-success:not(.btn-outline){
+            color: rgb(255, 255, 255) !important; 
+        }
+        .gantt_fix_color, .btn-manager{
+            background: #032B56 !important;
+        }
+        .gantt_fix_color:hover, .btn-manager:hover{
+            background: #03a9f3 !important;
+        }
+        .btn-group:not(.open) > .btn_next_submit,.btn-outline.btn-exchange{
+            color: #03a9f3 !important;
+        }
+        .btn_white_color{
+            color: white !important;
+        }
+        .btn-group > .btn_next_submit:hover,.btn-outline.btn-exchange:hover{
+            color: white !important;
+        }
+        .open .btn_white_color{
+            color: rgb(2, 2, 2) !important;
+        }
+        .border_black{
+            border: black solid 1px;
+        }
+    </style>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WD32P36');</script>
+    <!-- End Google Tag Manager -->
+
+    <style>
+        @font-face {
+            font-family: Poppins;
+            src: url('/assets/fonts/poppins/PoppinsVN-400.ttf') format('truetype'), url('/assets/fonts/poppins/PoppinsVN-400i.ttf') format('truetype'), url('/assets/fonts/poppins/PoppinsVN-500.ttf') format('truetype'), url('/assets/fonts/poppins/PoppinsVN-500i.ttf') format('truetype'), url('/assets/fonts/poppins/PoppinsVN-600.ttf') format('truetype'), url('/assets/fonts/poppins/PoppinsVN-600i.ttf') format('truetype'), url('/assets/fonts/poppins/PoppinsVN-700.ttf') format('truetype'), url('/assets/fonts/poppins/PoppinsVN-700i.ttf') format('truetype'), url('/assets/fonts/poppins/PoppinsVN-800.ttf') format('truetype'), url('/assets/fonts/poppins/PoppinsVN-800i.ttf') format('truetype'), url('/assets/fonts/poppins/PoppinsVN-900.ttf') format('truetype'), url('/assets/fonts/poppins/PoppinsVN-900i.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: fallback
+        }
+    </style>
+</head>
+<body class="fix-sidebar">
+<!-- Preloader -->
+<div class="preloader">
+    <div class="cssload-speeding-wheel"></div>
+</div>
+<div id="wrapper">
+    <!-- Left navbar-header -->
+    <div class="navbar-default sidebar" role="navigation">
+    <div class="navbar-header">
+        <!-- Toggle icon for mobile view -->
+        <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
+
+        <div class="top-left-part">
+            <!-- Logo -->
+            <a class="logo hidden-xs text-center" href="https://s1.socialyze.asia/admin/dashboard">
+                <span class="visible-md"><img src="https://s1.socialyze.asia/user-uploads/app-logo/6792674eb2516694d68e8c06b17d5ee9.png" alt="home" class=" admin-logo" /></span>
+                <span class="visible-sm"><img src="https://s1.socialyze.asia/user-uploads/app-logo/6792674eb2516694d68e8c06b17d5ee9.png" alt="home" class=" admin-logo" /></span>
+            </a>
+
+        </div>
+        <!-- /Logo -->
+
+        <!-- This is the message dropdown -->
+        <ul class="nav navbar-top-links navbar-right pull-right visible-xs">
+            
+
+            <li class="dropdown">
+                <select class="selectpicker language-switcher" data-width="fit">
+                    <option value="en"  selected  data-content='<span class="flag-icon flag-icon-gb"></span> En'>En</option>
+                                    </select>
+            </li>
+
+            <!-- .Task dropdown -->
+            <li class="dropdown" id="top-notification-dropdown">
+                <a class="dropdown-toggle waves-effect waves-light show-user-notifications" data-toggle="dropdown" href="#">
+                    <i class="icon-bell"></i>
+                                    </a>
+                <ul class="dropdown-menu  dropdown-menu-right mailbox animated slideInDown">
+                    <li>
+                        <a href="javascript:;">...</a>
+                    </li>
+
+                </ul>
+            </li>
+            <!-- /.Task dropdown -->
+
+
+            <li class="dropdown">
+                <a href="https://s1.socialyze.asia/logout" title="Logout" onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i>
+                </a>
+            </li>
+
+
+
+        </ul>
+
+    </div>
+    <!-- /.navbar-header -->
+
+    <div class="top-left-part">
+        <a class="logo hidden-xs hidden-sm text-center" href="https://s1.socialyze.asia/admin/dashboard">
+            <img src="https://s1.socialyze.asia/user-uploads/app-logo/6792674eb2516694d68e8c06b17d5ee9.png" alt="home" class=" admin-logo" />
+        </a>
+    </div>
+    <div class="sidebar-nav navbar-collapse slimscrollsidebar">
+        <!-- .User Profile -->
+        <ul class="nav" id="side-menu">
+            <li class="sidebar-search hidden-sm hidden-md hidden-lg">
+                <!-- input-group -->
+                <div class="input-group custom-search-form">
+                    <input type="text" class="form-control" placeholder="Search..."> <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"> <i class="fa fa-search"></i> </button>
+                    </span>
+                </div>
+                <!-- /input-group -->
+            </li>
+
+            <li class="user-pro hidden-sm hidden-md hidden-lg">
+                                <a href="#" class="waves-effect"><img src="https://s1.socialyze.asia/img/default-profile-4.png" alt="user-img" class="img-circle"> <span class="hide-menu">Admin
+                        <span class="fa arrow"></span></span>
+                </a>
+                                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="https://s1.socialyze.asia/member/dashboard">
+                            <i class="fa fa-sign-in"></i> Login As Employee                        </a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="https://s1.socialyze.asia/logout" onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Logout</a>
+
+                    </li>
+                </ul>
+            </li>
+            
+            <li><a href="https://s1.socialyze.asia/admin/dashboard" class="waves-effect"><i class="icon-speedometer fa-fw"></i> <span class="hide-menu"> Dashboard <span class="fa arrow"></span> </span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="https://s1.socialyze.asia/admin/dashboard" class="waves-effect">
+                            Dashboard                        </a>
+                    </li>
+                                        <li>
+                        <a href="https://s1.socialyze.asia/admin/project-dashboard" class="waves-effect">
+                            Project Dashboard                        </a>
+                    </li>
+                                                            <li>
+                        <a href="https://s1.socialyze.asia/admin/client-dashboard" class="waves-effect">
+                            Client Dashboard                        </a>
+                    </li>
+                                                            <li>
+                        <a href="https://s1.socialyze.asia/admin/hr-dashboard" class="waves-effect">
+                            HR Dashboard                        </a>
+                    </li>
+                                         <li>
+                        <a href="https://s1.socialyze.asia/admin/ticket-dashboard" class="waves-effect">
+                            Ticket Dashboard                        </a>
+                    </li>
+                                                            <li>
+                        <a href="https://s1.socialyze.asia/admin/finance-dashboard" class="waves-effect">
+                            Finance Dashboard                        </a>
+                    </li>
+                                    </ul>
+            </li>
+
+                        <li><a href="https://s1.socialyze.asia/admin/clients" class="waves-effect"><i class="icon-people fa-fw"></i> <span class="hide-menu"> Customers <span class="fa arrow"></span> </span></a>
+                <ul class="nav nav-second-level">
+                                        <li><a href="https://s1.socialyze.asia/admin/clients" class="waves-effect">Clients</a> </li>
+                                                            <li><a href="https://s1.socialyze.asia/admin/leads" class="waves-effect">Leads</a>
+                    </li>
+                                    </ul>
+            </li>
+            
+
+             
+                        <li><a href="https://s1.socialyze.asia/admin/projects" class="waves-effect"><i class="icon-layers fa-fw"></i> <span class="hide-menu"> Projects</span></a> </li>
+                        
+                         <li><a href="https://s1.socialyze.asia/admin/topics" class="waves-effect"><i class="fa fa-tasks fa-fw"></i> <span class="hide-menu"> Topics</span></a></li>
+            
+                        <li>
+                <a href="https://s1.socialyze.asia/admin/dashboard-builder" class="waves-effect ">
+                    <i class="fa fa-th-large fa-fw"></i>
+                    <span class="hide-menu">Dashboard Builder <span class="fa arrow"></span></span>
+                </a>
+                <ul class="nav nav-second-level ">
+                    <li style="display: none;"><a href="https://s1.socialyze.asia/admin/dashboard-builder/tab" class="waves-effect">Tab</a></li>
+                    <li><a href="https://s1.socialyze.asia/admin/dashboard-builder/widget" class="waves-effect">Widget</a></li>
+                    <li style="display: none;"><a href="https://s1.socialyze.asia/admin/dashboard-builder/widget/create" class="waves-effect">Create Widget</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="javascript:;" class="waves-effect ">
+                    <i class="fa fa-commenting-o fa-fw"></i>
+                    <span class="hide-menu">Mention <span class="fa arrow"></span></span>
+                </a>
+                <ul class="nav nav-second-level ">
+                    <li><a href="https://s1.socialyze.asia/admin/mention-reports" class="waves-effect">Report Template</a></li>
+                    <li><a href="https://s1.socialyze.asia/admin/report-review" class="waves-effect">Report Review</a></li>
+                </ul>
+            </li>
+            <li><a href="https://s1.socialyze.asia/admin/incidents" class="waves-effect"><i class="fa fa-exclamation-triangle fa-fw"></i> <span class="hide-menu">Incident</span></a></li>
+
+            
+            
+
+
+            
+            
+            
+                        <li><a href="https://s1.socialyze.asia/admin/tickets" class="waves-effect"><i class="ti-ticket fa-fw"></i> <span class="hide-menu">Tickets</span> </a> </li>
+            
+
+            
+            
+            
+                        <li><a href="https://s1.socialyze.asia/admin/notices" class="waves-effect"><i class="ti-layout-media-overlay fa-fw"></i> <span class="hide-menu">Notice Board </span></a> </li>
+            
+            
+                        <li><a href="https://s1.socialyze.asia/admin/user-chat" class="waves-effect"><i class="icon-envelope fa-fw"></i> <span class="hide-menu">Messages </span></a> </li>
+            
+            
+            <!--                 <li><a href="https://s1.socialyze.asia/admin/task" class="waves-effect"><i class="icon-layers fa-fw"></i> <span class="hide-menu"> Work <span class="fa arrow"></span> </span></a>
+                    <ul class="nav nav-second-level">
+                                                    <li><a href="https://s1.socialyze.asia/admin/contracts" class="waves-effect">Contracts</a></li>
+                                                                            <li><a href="https://s1.socialyze.asia/admin/projects" class="waves-effect">Projects </a> </li>
+                                                                            <li><a href="https://s1.socialyze.asia/admin/task/all-tasks">Tasks</a></li>
+                            <li class="hidden-sm hidden-xs"><a href="https://s1.socialyze.asia/admin/task/taskboard">Task Board</a></li>
+                            <li><a href="https://s1.socialyze.asia/admin/task/task-calendar">Task Calendar</a></li>
+                                                
+                    </ul>
+                </li>
+             -->
+
+            
+                        <li><a href="https://s1.socialyze.asia/admin/task/all-tasks" class="waves-effect"><i class="ti-check-box fa-fw"></i> <span class="hide-menu"> Tasks</span></a></li>
+            <li class="hidden-sm hidden-xs"><a href="https://s1.socialyze.asia/admin/task/taskboard" class="waves-effect"><i class="ti-layout-column3 fa-fw"></i> <span class="hide-menu"> Task Board</span></a></li>
+            <li><a href="https://s1.socialyze.asia/admin/task/task-calendar" class="waves-effect"><i class="icon-calender fa-fw"></i> <span class="hide-menu"> Task Calendar</span></a></li>
+                        
+            
+                        <li><a href="https://s1.socialyze.asia/admin/employees/employees" class="waves-effect
+                    
+                    "><i class="ti-user fa-fw"></i> <span class="hide-menu"> HR <span class="fa arrow"></span> </span></a>
+                <ul class="nav nav-second-level ">
+                                        <li><a href="https://s1.socialyze.asia/admin/employees/employees">Employee List</a></li>
+                    <li><a href="https://s1.socialyze.asia/admin/employees/teams">Department</a></li>
+                    <li><a href="https://s1.socialyze.asia/admin/designations">Designation</a></li>
+                                                                                                </ul>
+            </li>
+            
+            
+                        <li><a href="https://s1.socialyze.asia/admin/finance" class="waves-effect"><i class="fa fa-money fa-fw"></i> <span class="hide-menu"> Finance  <span class="fa arrow"></span> </span></a>
+                <ul class="nav nav-second-level">
+                                        <li><a href="https://s1.socialyze.asia/admin/finance/estimates">Estimates</a> </li>
+                    
+                                        <li><a href="https://s1.socialyze.asia/admin/finance/all-invoices">Invoices</a> </li>
+                    
+                                        <li><a href="https://s1.socialyze.asia/admin/finance/payments">Payments</a> </li>
+                    
+                    
+                                        <li><a href="https://s1.socialyze.asia/admin/finance/all-credit-notes">Credit Note</a> </li>
+                                    </ul>
+            </li>
+            
+            
+                        <li><a href="https://s1.socialyze.asia/admin/reports" class="waves-effect"><i class="ti-pie-chart fa-fw"></i> <span class="hide-menu"> Reports <span class="fa arrow"></span> </span></a>
+                <ul class="nav nav-second-level">
+                                        <li><a href="https://s1.socialyze.asia/admin/reports/task-report">Task Report</a></li>
+                    
+                    
+                                        <li><a href="https://s1.socialyze.asia/admin/reports/finance-report">Finance Report</a></li>
+                    <li><a href="https://s1.socialyze.asia/admin/reports/income-expense-report">Income Vs Expense Report</a></li>
+                    
+                    
+                                    </ul>
+            </li>
+            
+            
+                        <li><a href="https://s1.socialyze.asia/admin/contracts" class="waves-effect"><i class="fa fa-file fa-fw"></i><span class="hide-menu"> Contracts</span></a></li>
+                        
+                        <li><a href="https://s1.socialyze.asia/admin/billing" class="waves-effect"><i class="icon-book-open fa-fw"></i> <span class="hide-menu"> Billing</span></a>
+            </li>
+            
+            
+                                                                                                                                                                        <li><a href="https://s1.socialyze.asia/admin/faqs" class="waves-effect"><i class="icon-docs fa-fw"></i> <span class="hide-menu"> Admin FAQ</span></a></li>
+            <li><a href="https://s1.socialyze.asia/admin/settings" class="waves-effect"><i class="ti-settings fa-fw"></i> <span class="hide-menu"> Settings</span></a>
+            </li>
+
+
+
+                        <li>
+                <a href="#" class="waves-effect">
+                    <i class="fa fa-bell fa-fw"></i>
+                    <span class="hide-menu">Alerts <span class="fa arrow"></span></span>
+                </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="https://s1.socialyze.asia/admin/alerts" class="waves-effect">Alert Rules</a></li>
+                    <li><a href="https://s1.socialyze.asia/admin/alert-mentions" class="waves-effect">Alert Review</a></li>
+                    <li><a href="https://s1.socialyze.asia/admin/alert-mentions/alert-messages" class="waves-effect">Alert Queue</a></li>
+                    <li><a href="https://s1.socialyze.asia/admin/alert-templates" class="waves-effect">Alert Templates</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#" class="waves-effect">
+                    <i class="fa fa-wrench fa-fw"></i>
+                    <span class="hide-menu">Sources <span class="fa arrow"></span></span>
+                </a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="https://s1.socialyze.asia/admin/source-category">Sources type</a>
+                    </li>
+                    <li>
+                        <a href="https://s1.socialyze.asia/admin/sources">Sources</a>
+                    </li>
+                    <li>
+                        <a href="https://s1.socialyze.asia/admin/threads">Threads</a>
+                    </li>
+                </ul>
+            </li>
+
+                        <li>
+                <a href="#" class="waves-effect">
+                    <i class="fa fa-graduation-cap fa-fw"></i>
+                    <span class="hide-menu">Keywords <span class="fa arrow"></span></span>
+                </a>
+                <ul class="nav nav-second-level">
+
+                    <li><a href="https://s1.socialyze.asia/admin/nlp/keyword-sentiment" class="waves-effect">Sentiment Keywords</a></li>
+                </ul>
+            </li>
+            
+                            <li>
+                    <a href="#" class="waves-effect">
+                        <i class="fa fa-industry fa-fw"></i>
+                        <span class="hide-menu">Industry <span class="fa arrow"></span></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="https://s1.socialyze.asia/industry" class="waves-effect">Industry</a></li>
+                    </ul>
+                </li>
+            
+        </ul>
+    </div>
+    <div class="menu-footer">
+        <div class="menu-user row">
+            <div class="col-lg-4 m-b-5">
+                <div class="btn-group dropup user-dropdown ">
+                    <img aria-expanded="false" data-toggle="dropdown" src="https://s1.socialyze.asia/img/default-profile-4.png" alt="user-img" class="img-circle dropdown-toggle h-30 w-30">
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a class="bg-inverse"><strong class="text-white">Admin</strong></a></li>
+                        <li>
+                            <a href="https://s1.socialyze.asia/member/dashboard">
+                                <i class="fa fa-sign-in"></i> Login As Employee                            </a>
+                        </li>
+                                                                        <li><a href="https://s1.socialyze.asia/logout" onclick="event.preventDefault();
+                                                                document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Logout</a>
+                            <form id="logout-form" action="https://s1.socialyze.asia/logout" method="POST" style="display: none;">
+                                <input type="hidden" name="_token" value="qeXw7hDvpDPfoCgceiewf2lLTLiGoRJ5z5iyXE3N">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center m-b-5">
+                <div class="btn-group dropup shortcut-dropdown">
+                    <a class="dropdown-toggle waves-effect waves-light text-uppercase" data-toggle="dropdown" href="#">
+                        <i class="fa fa-plus"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                                                <li>
+                            <div class="message-center">
+                                <a href="https://s1.socialyze.asia/admin/projects/create">
+                                    <div class="mail-contnet">
+                                        <span class="mail-desc m-0">Add Project</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        
+                                                <li>
+                            <div class="message-center">
+                                <a href="https://s1.socialyze.asia/admin/task/all-tasks/create">
+                                    <div class="mail-contnet">
+                                        <span class="mail-desc m-0">Add Task</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        
+                                                <li>
+                            <div class="message-center">
+                                <a href="https://s1.socialyze.asia/admin/clients/create">
+                                    <div class="mail-contnet">
+                                        <span class="mail-desc m-0">Add Client</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        
+                                                <li>
+                            <div class="message-center">
+                                <a href="https://s1.socialyze.asia/admin/employees/employees/create">
+                                    <div class="mail-contnet">
+                                        <span class="mail-desc m-0">Add Employee</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        
+                                                <li>
+                            <div class="message-center">
+                                <a href="https://s1.socialyze.asia/admin/finance/payments/create">
+                                    <div class="mail-contnet">
+                                        <span class="mail-desc m-0">Add Payment</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        
+                                                <li>
+                            <div class="message-center">
+                                <a href="https://s1.socialyze.asia/admin/tickets/create">
+                                    <div class="mail-contnet">
+                                        <span class="mail-desc m-0">Add Ticket</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 text-right m-b-5">
+                <div class="btn-group dropup notification-dropdown">
+                    <a class="dropdown-toggle show-user-notifications" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell"></i>
+                                            </a>
+                    <ul class="dropdown-menu mailbox ">
+                        <li>
+                            <a href="javascript:;">...</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="menu-copy-right">
+            <a href="javascript:void(0)" class="open-close hidden-xs waves-effect waves-light"><i class="ti-angle-double-right ti-angle-double-left"></i> <span class="collapse-sidebar-text">Collapse Sidebar</span></a>
+        </div>
+
+    </div>
+
+
+</div>
+            <!-- Left navbar-header end -->
+    <!-- Page Content -->
+    <div id="page-wrapper" class="row">
+        <div id="app" class="container-fluid">
+
+            
+            
+            
+             
+
+            <div class="
+                        col-md-12
+                        data-section" id ="section-task">
+                <button class="btn btn-default btn-xs btn-outline btn-circle m-t-5 filter-section-show hidden-sm hidden-md" style="display:none"><i class="fa fa-chevron-right"></i></button>
+                
+                    <div class="row bg-title">
+        <!-- .page title -->
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <h4 class="page-title"><i class="fa fa-tasks"></i> Topics</h4>
+        </div>
+        <!-- /.page title -->
+        <!-- .breadcrumb -->
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+            <ol class="breadcrumb">
+                <li><a href="https://s1.socialyze.asia/admin/dashboard">Home</a></li>
+                <li><a href="https://s1.socialyze.asia/admin/topics">Topics</a></li>
+                <li class="active">Edit</li>
+            </ol>
+        </div>
+        <!-- /.breadcrumb -->
+    </div>
+
+                        <!-- .row -->
+                    <div class="row">
+        <div class="col-xs-12">
+            <div id="form-kw" index="0" class="box-input hidden">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" name="primary[]" class="form-control" required/>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" name="secondary[]" class="form-control" required/>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" name="exclude[]" class="form-control" required/>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-link btn-lg rm-btn" style="opacity: 0;">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+            </div>
+            <form method="POST" action="https://s1.socialyze.asia/admin/topics/108/edit" accept-charset="UTF-8" id="updateTopic" class="ajax-form"><input name="_method" type="hidden" value="PUT"><input name="_token" type="hidden" value="qeXw7hDvpDPfoCgceiewf2lLTLiGoRJ5z5iyXE3N">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item disabled">
+                    <a class="nav-link disabled-tab" role="tab" href="#topic_tab" tabindex="-1">Generali - Brand Health AWO</a>
+                </li>
+                <li class="nav-item disabled">
+                    <a class="nav-link disabled-tab" role="tab" href="#keywords_tab" tabindex="-1">Keywords</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" role="tab" data-toggle="tab" href="#search_keywords_tab">Search keywords</a>
+                </li>
+                <li class="nav-item disabled">
+                    <a class="nav-link disabled-tab" role="tab" href="#alert_tab" tabindex="-1">Alert</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade loaded" id="topic_tab">
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading"> Update Topic</div>
+                        <div class="panel-wrapper collapse in" aria-expanded="true">
+                            <div class="panel-body">
+                                <div class="form-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <input type="hidden" id="topic_id" name="topic_id" value="108">
+                                            <div class="form-group">
+                                                <label class="control-label required">Title</label>
+                                                <input type="text" id="heading" name="title" value="Generali - Brand Health AWO" class="form-control" required>
+                                            </div>
+                                        </div>
+                                                                                    <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="control-label">Project</label>
+                                                    <select  class="select2 form-control"
+                                                            data-placeholder="Select Project" id="project_id"
+                                                            name="project_id">
+                                                        <option value="">--</option>
+                                                                                                                    <option                                                             value="36">Thiên Long</option>
+                                                                                                                    <option                                                             value="41">Theo Dõi Chiến Dịch Thương Hiệu Vans</option>
+                                                                                                                    <option                                                             value="42">Theo Dõi Chiến Dịch Thương Hiệu Vans</option>
+                                                                                                                    <option                                                             value="43">Theo Dõi Thương Hiệu Dragon Capital</option>
+                                                                                                                    <option                                                             value="44">Generali</option>
+                                                                                                                    <option                                                             value="45">Bệnh Viện Phương Châu</option>
+                                                                                                                    <option                                                             value="47">Test</option>
+                                                                                                                    <option                                                             value="51">Theo Dõi Crisis Inspire Khai Nguyên</option>
+                                                                                                                    <option                                                             value="52">Golden Communication Group</option>
+                                                                                                                    <option                                                             value="53">BornPink Concert</option>
+                                                                                                                    <option                                                             value="54">Theo Dõi Thương Hiệu Nhà Sách Fahasa</option>
+                                                                                                                    <option                                                             value="55">MM Mega Market</option>
+                                                                                                                    <option                                                             value="56">Property Guru Việt Nam</option>
+                                                                                                                    <option                                                             value="57">Theo Dõi Chiến Dịch Size Chuẩn Dáng Chất - Nuskin</option>
+                                                                                                                    <option                                                             value="58">Theo Dõi The Canadian International School</option>
+                                                                                                                    <option                                                             value="59">Anh Hoàng DT</option>
+                                                                                                                    <option                                                             value="61">Isentia</option>
+                                                                                                                    <option                                                             value="62">Business Development</option>
+                                                                                                                    <option                                                             value="63">Theo Dõi Chiến Dịch HPV</option>
+                                                                                                                    <option                                                             value="64">Research NAP</option>
+                                                                                                                    <option                                                             value="65">Crisis The Coffee House</option>
+                                                                                                                    <option                                                             value="66">BM Windows</option>
+                                                                                                                    <option                                                             value="67">Ngành Vật Liệu Xây Dựng Và Nội Thất</option>
+                                                                                                                    <option                                                             value="68">VFF 2023 - Dentsu</option>
+                                                                                                                    <option                                                             value="69">Tiki Affiliate - Siêu Sale 10.10</option>
+                                                                                                                    <option                                                             value="70">TVS 2025</option>
+                                                                                                                    <option                                                             value="72">Reputyze Asia</option>
+                                                                                                                    <option                                                             value="73">Kingfoodmart</option>
+                                                                                                                    <option                                                             value="74">Test</option>
+                                                                                                                    <option                                                             value="75">LEAD</option>
+                                                                                                                    <option                                                             value="76">Golden Pen</option>
+                                                                                                                    <option                                                             value="77">GVL 2021</option>
+                                                                                                                    <option                                                             value="79">[Demo] Alert Review Company 22</option>
+                                                                                                                    <option                                                             value="81">[Demo] Alert Queue Company 22</option>
+                                                                                                                    <option  selected                                                             value="82">GVL</option>
+                                                                                                            </select>
+                                                </div>
+                                            </div>
+                                                                                <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Status</label>
+                                                <select class="select2 form-control" id="status" name="status">
+                                                                                                            <option                                                         value="not-started">Not started</option>
+                                                                                                            <option                                                         value="todo">To do</option>
+                                                                                                            <option  selected                                                         value="in-progress">In progress</option>
+                                                                                                            <option                                                         value="done">Done</option>
+                                                                                                    </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Topic color</label>
+                                                <input type="text" id="color" name="color" class="complex-colorpicker color-topic form-control asColorPicker-input" required value="#154373" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label required">Date range (Start)</label>
+                                                <input type="text" id="fromDate" name="fromDate" placeholder="From (yyyy-mm-dd)" value="2026-01-01" class="form-control" autocomplete="on">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label required">Date range (End)</label>
+                                                <input type="text" id="toDate" name="toDate" placeholder="To (yyyy-mm-dd)" value="2026-12-31" class="form-control" autocomplete="on">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Topic type</label>
+                                                <select class="select2 form-control"
+                                                        data-placeholder="" id="topic_type_id"
+                                                        name="topic_type_id">
+                                                                                                            <option  selected  value="1">Social Monitor</option>
+                                                                                                            <option  value="2">Influencer</option>
+                                                                                                            <option  value="3">Target Segment</option>
+                                                                                                            <option  value="4">Target Persona</option>
+                                                                                                            <option  value="5">Target Behavior</option>
+                                                                                                            <option  value="6">Price</option>
+                                                                                                            <option  value="7">Trend</option>
+                                                                                                            <option  value="8">Comparision</option>
+                                                                                                    </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Auto Enrich</label>
+                                                <select name="is_auto_enrich" class="form-control">
+                                                    <option  >No</option>
+                                                    <option  selected  >Yes</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="priority" class="form-label">Topic Priority</label>
+                                                <input type="number" name="priority" id="priority" class="form-control"
+                                                    value="3" min="1" required>
+                                                <small class="form-text text-muted">
+                                                    Mức độ ưu tiên cao hơn có nghĩa là topic này sẽ được cào trước.
+                                                </small>
+                                                <div id="priority-error" class="text-danger mt-2" style="display: none;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Is Sync Data To Elasticsearch</label>
+                                                <select name="is_sync_data_to_es" class="form-control">
+                                                    <option  >No</option>
+                                                    <option  selected  >Yes</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-md-12" id="thread-priority-config">
+                                            <div class="card-header">
+                                                <h4>Thread Priority Config</h4>
+                                                <p class="text-muted">Điền khoảng giá trị ưu tiên. Lưu ý, giá trị "Từ" phải nhỏ hơn
+                                                    giá trị "Đến".</p>
+                                            </div>
+                                            <div class="card-body">
+        
+                                                <!-- Urgent Priority -->
+                                                <div class="form-group d-flex align-items-center mb-3">
+                                                    <label for="urgent_priority" class="form-label mr-2">Urgent <span
+                                                            class="text-muted">(Ưu tiên cao nhất)</span></label>
+                                                    <input type="number" name="priority_range[Urgent][from]" placeholder="Từ"
+                                                        class="form-control mr-2" style="width: 100px;" min="0" value="">
+                                                    <span class="mr-2">-</span>
+                                                    <input type="number" name="priority_range[Urgent][to]" placeholder="Đến"
+                                                        class="form-control" style="width: 100px;" min="0" value="">
+                                                </div>
+        
+                                                <!-- High Priority -->
+                                                <div class="form-group d-flex align-items-center mb-3">
+                                                    <label for="high_priority" class="form-label mr-2">High <span
+                                                            class="text-muted">(Ưu tiên cao)</span></label>
+                                                    <input type="number" name="priority_range[High][from]" placeholder="Từ"
+                                                        class="form-control mr-2" style="width: 100px;" min="0" value="">
+                                                    <span class="mr-2">-</span>
+                                                    <input type="number" name="priority_range[High][to]" placeholder="Đến"
+                                                        class="form-control" style="width: 100px;" min="0" value="">
+                                                </div>
+        
+                                                <!-- Normal Priority -->
+                                                <div class="form-group d-flex align-items-center mb-3">
+                                                    <label for="normal_priority" class="form-label mr-2">Normal <span
+                                                            class="text-muted">(Ưu tiên <br> trung bình)</span></label>
+                                                    <input type="number" name="priority_range[Normal][from]" placeholder="Từ"
+                                                        class="form-control mr-2" style="width: 100px;" min="0" value="">
+                                                    <span class="mr-2">-</span>
+                                                    <input type="number" name="priority_range[Normal][to]" placeholder="Đến"
+                                                        class="form-control" style="width: 100px;" min="0" value="">
+                                                </div>
+        
+                                                <!-- Low Priority -->
+                                                <div class="form-group d-flex align-items-center mb-3">
+                                                    <label for="low_priority" class="form-label mr-2">Low <span
+                                                            class="text-muted">(Ưu tiên thấp)</span></label>
+                                                    <input type="number" name="priority_range[Low][from]" placeholder="Từ"
+                                                        class="form-control mr-2" style="width: 100px;" min="0" value="">
+                                                    <span class="mr-2">-</span>
+                                                    <input type="number" name="priority_range[Low][to]" placeholder="Đến"
+                                                        class="form-control" style="width: 100px;" min="0" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Industry/Domain</label>
+                                                <select class="select2 form-control"
+                                                        id="industry_id"
+                                                        name="industry_id">
+                                                    <option value="">-- Choose a value --</option>
+                                                                                                            <option value="1" >Consumer Goods</option>
+                                                                                                            <option value="2" >Finance &amp; Banking</option>
+                                                                                                            <option value="3" >Food &amp; Restaurants</option>
+                                                                                                            <option value="4" >Gaming &amp; Esports</option>
+                                                                                                            <option value="5" >Government</option>
+                                                                                                            <option value="6" >Healthcare</option>
+                                                                                                            <option value="7" >Higher Education</option>
+                                                                                                            <option value="8" >Legal</option>
+                                                                                                            <option value="9" >Media &amp; Entertainment</option>
+                                                                                                            <option value="10" >Nonprofit</option>
+                                                                                                            <option value="11" >Real Estate</option>
+                                                                                                            <option value="12" >Recruiting</option>
+                                                                                                            <option value="13" >Retail</option>
+                                                                                                            <option value="14" >Sports</option>
+                                                                                                            <option value="15" >Technology &amp; Software</option>
+                                                                                                            <option value="16" >Travel &amp; Hospitality</option>
+                                                                                                    </select>
+                                            </div>
+                                        </div>
+                                                                            </div>
+                                    <!--/row-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade loaded" id="keywords_tab">
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading">
+                            Topic keywork
+                            -                                                                     <a href="#advance" role="tab" data-toggle="tab" class="kw-tab"><small class="font-normal"> switch to advance </small></a>
+                                    <input type="hidden" value="basic" name="type" id="type-kw"/>
+                                                                                    </div>
+                        <div class="panel-wrapper collapse in">
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div id="advance" role="tabpanel" class="tab-pane ">
+                                        <div class="row">
+                                            <div class="col-md-12 topkw-input">
+                                                <h5>
+                                                    Search keywords
+                                                    <p style="color: #928e8e"><i class="font-12 color-theme-orange">Separate keywords with commas</i></p>
+                                                </h5>
+                                                                                                                                                                                                                    <input name="search-kw" value="genali,nhà G,Gen,#GeneraliVietnam,Generali,Generali Vietnam,Generali Việt Nam,Bảo hiểm Generali,generalivietnam" id="search-kw" class="form-control tagsinput"/>
+                                                                                                                                                </div>
+                                            <div class="col-md-12">
+                                                <h5>
+                                                    Filter expression
+                                                    <p style="color: #928e8e"><i class="font-12 color-theme-orange">Syntax Examples: "keyword A" & "keyword B"</i></p>
+                                                </h5>
+                                                                                                                                                                                                                    <textarea name="filter-kw" id="filter-kw" class="form-control" cols="30" rows="5">(&quot;genali&quot; &quot;nhà G&quot; &quot;Gen&quot; &quot;#GeneraliVietnam&quot; &quot;Generali&quot; &quot;Generali Vietnam&quot; &quot;Generali Việt Nam&quot; &quot;Bảo hiểm Generali&quot; &quot;generalivietnam&quot;) AND (&quot;CSSK&quot; &quot;sức khỏe&quot; &quot;bảo hiểm&quot; &quot;gói&quot; &quot;vita&quot; &quot;sản phẩm&quot; &quot;quyền lợi&quot; &quot;từ chối&quot; &quot;ung thư&quot; &quot;viện phí&quot; &quot;loại trừ&quot; &quot;bệnh&quot; &quot;thẻ&quot; &quot;bồi thường&quot; &quot;chi trả&quot; &quot;hợp đồng&quot; &quot;hiệu lực&quot; &quot;phí&quot; &quot;mua&quot; &quot;cân nhắc&quot; &quot;hỗ trợ&quot; &quot;tư vấn&quot; &quot;TVV&quot; &quot;đại lý&quot; &quot;lừa&quot; &quot;gài bẫy&quot; &quot;cảnh báo&quot; &quot;điều khoản&quot; &quot;BHNT&quot; &quot;HĐBH&quot; &quot;BHTS&quot; &quot;HĐ&quot; &quot;Gencasa&quot; &quot;chương trình&quot; &quot;khách hàng&quot; &quot;KH&quot; &quot;nhân thọ&quot; &quot;bảo hiểm&quot; &quot;loại trừ&quot; &quot;thẻ&quot; &quot;chương trình&quot; &quot;lừa&quot; &quot;gói&quot; &quot;vita&quot; &quot;cảnh báo&quot; &quot;từ chối&quot; &quot;khách hàng&quot;) AND -(&quot;tuyển dụng&quot; &quot;open&quot; &quot;job&quot; &quot;đào tạo&quot; &quot;thu nhập&quot; &quot;cơ hội nghề nghiệp&quot; &quot;việc làm&quot; &quot;assessment center&quot; &quot;doanh số&quot; &quot;kickoff&quot; &quot;check-in&quot; &quot;nơi làm việc&quot; &quot;kick off&quot; &quot;tuyển dụng&quot; &quot;open&quot; &quot;job&quot; &quot;đào tạo&quot; &quot;thu nhập&quot; &quot;cơ hội&quot; &quot;nghề nghiệp&quot; &quot;việc làm&quot; &quot;doanh số&quot; &quot;kickoff&quot; &quot;kick off&quot; &quot;nơi làm việc&quot; &quot;check-in&quot;)</textarea>
+                                                                                                                                                </div>
+                                        </div>
+                                    </div>
+                                    <div id="basic" role="tabpanel" class="tab-pane   fade active in loaded  ">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <h5>
+                                                    Primary keywords
+                                                    <p style="color: #928e8e"><i class="font-12 color-theme-orange">Separate keywords with commas</i></p>
+                                                </h5>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5>
+                                                    Secondary keywords
+                                                    <p style="color: #928e8e"><i class="font-12 color-theme-orange">Separate keywords with commas</i></p>
+                                                </h5>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5 class="text-danger">
+                                                    Exclude keywords
+                                                    <p style="color: #928e8e"><i class="font-12 color-theme-orange">Separate keywords with commas</i></p>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="basic-form">
+                                            <div class="row">
+                                                                                                                                                                                                                                                                            <div id="form-kw-1" index="1" class="box-input">
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <input type="text" value="genali,nhà G,Gen" name="primary[]" class="form-control tagsinput" required/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <input type="text" value="CSSK,sức khỏe,bảo hiểm,gói,vita,sản phẩm,quyền lợi,từ chối,ung thư,viện phí,loại trừ,bệnh ,thẻ,bồi thường,chi trả,hợp đồng,hiệu lực,phí,mua,cân nhắc,hỗ trợ,tư vấn,TVV,đại lý,lừa,gài bẫy,cảnh báo,điều khoản,BHNT,HĐBH,BHTS,HĐ,Gencasa,chương trình,khách hàng,KH,nhân thọ" name="secondary[]" class="form-control tagsinput" required/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <input type="text" value="tuyển dụng,open,job,đào tạo,thu nhập,cơ hội nghề nghiệp,việc làm,assessment center,doanh số,kickoff ,check-in,nơi làm việc ,kick off" name="exclude[]" class="form-control tagsinput" required/>
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" class="btn btn-link btn-lg rm-btn">
+                                                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                                            </button>
+                                                        </div>
+                                                                                                                                                                                                                                <p style="color: #337ab7;">OR</p>
+                                                                                                                <div id="form-kw-2" index="2" class="box-input">
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <input type="text" value="#GeneraliVietnam,Generali,Generali Vietnam,Generali Việt Nam,Bảo hiểm Generali,generalivietnam" name="primary[]" class="form-control tagsinput" required/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <input type="text" value="bảo hiểm,loại trừ,thẻ,chương trình,lừa ,gói,vita,cảnh báo,từ chối,khách hàng" name="secondary[]" class="form-control tagsinput" required/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <input type="text" value="tuyển dụng,open,job,đào tạo,thu nhập,cơ hội,nghề nghiệp,việc làm,doanh số,kickoff,kick off,nơi làm việc,check-in" name="exclude[]" class="form-control tagsinput" required/>
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" class="btn btn-link btn-lg rm-btn">
+                                                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                                            </button>
+                                                        </div>
+                                                                                                                                                    <div class="actions col-md-12">
+                                                    <button id="addKW" type="button" class="btn btn-link btn-lg">
+                                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ADD KEYWORD
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading">
+                            Top keywords
+                            <p class="m-0" style="color: #928e8e"><i class="font-12 color-theme-orange">Separate keywords with commas</i></p>
+                        </div>
+                        <div class="panel-wrapper collapse in">
+                            <div class="panel-body topkw-input">
+                                <input type="text" value="" name="top_kw" class="form-control tagsinput"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade in active loaded" id="search_keywords_tab">
+                    <div class="panel panel-inverse">
+                        <div class="panel-wrapper collapse in">
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div class="col-md-8">
+                                        <table class="table table-responsive">
+                                            <thead>
+                                            <tr>
+                                                <th>STT</th>
+                                                <th>Keyword</th>
+                                                <th>Last time facebook search</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                                                                                                                                                                                                                            <tr>
+                                                    <td>1</td>
+                                                    <td>#GeneraliVietnam</td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                                                                    <tr>
+                                                    <td>2</td>
+                                                    <td>gen bảo hiểm</td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                                                                    <tr>
+                                                    <td>3</td>
+                                                    <td>generali loại trừ</td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                                                                    <tr>
+                                                    <td>4</td>
+                                                    <td>generali từ chối chi trả</td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                                                                    <tr>
+                                                    <td>5</td>
+                                                    <td>generali lừa khách</td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                                                                    <tr>
+                                                    <td>6</td>
+                                                    <td>gen thẻ</td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                                                                    <tr>
+                                                    <td>7</td>
+                                                    <td>gen loại trừ</td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                                                                    <tr>
+                                                    <td>8</td>
+                                                    <td>gen từ chối</td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                                                                    <tr>
+                                                    <td>9</td>
+                                                    <td>gen cảnh báo</td>
+                                                    <td></td>
+                                                </tr>
+                                                                                                                                        </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="panel-heading">
+                                            Update keywords
+                                        </div>
+                                        <textarea name="search_keywords" style="height: 300px;" class="form-control" placeholder="Keywords line by line">#GeneraliVietnam
+                                        gen bảo hiểm
+                                        generali loại trừ
+                                        generali từ chối chi trả
+                                        generali lừa khách
+                                        gen thẻ
+                                        gen loại trừ
+                                        gen từ chối
+                                        gen cảnh báo</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="tab-pane fade loaded" id="alert_tab">
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading">
+                            SMS CONFIGURATION
+                        </div>
+                        <div class="panel-wrapper collapse in" aria-expanded="true">
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h5>SMS Approve Required ?</h5>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="is_approve_sms"   value="1"> Yes
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="is_approve_sms" checked value="0"> No
+                                            </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h5>SMS Quota (Monthly) <span class="text-danger">*</span></h5>
+                                            <input type="text" name="sms_quota" value="0" class="form-control" style="width: 150px">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h5>Number of threads per message</h5>
+                                            <input type="text" name="number_merge_sms" value="0" class="form-control" style="width: 150px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    ALERT RULES
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="panel-wrapper collapse in" aria-expanded="true">
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th style="font-weight: bold">#</th>
+                                                    <th style="font-weight: bold">Name</th>
+                                                    <th style="font-weight: bold">Channel</th>
+                                                    <th style="font-weight: bold">Active</th>
+                                                    <th style="font-weight: bold">Action</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            </div>
+            <div class="form-actions text-right" style="margin-top: 10px; padding: 25px; color: #fff">
+                <button type="button" id="update-topic" class="btn btn-success"><i class="fa fa-check"></i> Save</button>
+            </div>
+            </form>
+        </div>
+    </div>
+    <!-- .row -->
+
+                <!-- .right-sidebar -->
+<div class="right-sidebar">
+    <div id="right-sidebar-content">
+
+    </div>
+</div>
+<!-- /.right-sidebar -->
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->
+
+
+<div id="footer-sticky-notes" class="row hidden-xs hidden-sm">
+    <div class="col-xs-12" id="sticky-note-header">
+        <div class="col-xs-10" style="line-height: 30px">
+        Sticky Notes <a href="javascript:;" onclick="showCreateNoteModal()"  class="btn btn-default-theme btn-outline btn-xs m-l-10"><i class="fa fa-plus"></i> Add Note</a>
+            </div>
+        <div class="col-xs-2">
+            <a href="javascript:;" class="btn btn-default btn-circle pull-right" id="open-sticky-bar"><i class="fa fa-chevron-up"></i></a>
+            <a style="display: none;" class="btn btn-default btn-circle pull-right" href="javascript:;" id="close-sticky-bar"><i class="fa fa-chevron-down"></i></a>
+        </div>
+
+    </div>
+
+    <div id="sticky-note-list" style="display: none">
+
+        
+    </div>
+</div>
+
+
+
+
+
+
+<div class="modal fade bs-modal-md in" id="projectTimerModal" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" id="modal-data-application">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <span class="caption-subject font-red-sunglo bold uppercase" id="modelHeading"></span>
+            </div>
+            <div class="modal-body">
+                Loading...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn blue">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+
+<div id="responsive-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            Loading ...
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade bs-modal-md in" id="projectTimerModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" id="modal-data-application">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <span class="caption-subject font-red-sunglo bold uppercase" id="modelHeading"></span>
+            </div>
+            <div class="modal-body">
+                Loading...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn blue">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+
+<div class="modal fade bs-modal-md in"  id="subTaskModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" id="modal-data-application">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <span class="caption-subject font-red-sunglo bold uppercase" id="subTaskModelHeading">Sub Task e</span>
+            </div>
+            <div class="modal-body">
+                Loading...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn blue">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+<!-- jQuery -->
+<script src="https://s1.socialyze.asia/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://s1.socialyze.asia/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js'></script>
+
+<!-- Sidebar menu plugin JavaScript -->
+<script src="https://s1.socialyze.asia/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+<!--Slimscroll JavaScript For custom scroll-->
+<script src="https://s1.socialyze.asia/js/jquery.slimscroll.js"></script>
+<script src="https://s1.socialyze.asia/plugins/bower_components/moment/min/moment.min.js"></script>
+<!--Wave Effects -->
+<script src="https://s1.socialyze.asia/js/waves.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="https://s1.socialyze.asia/plugins/bower_components/sweetalert/sweetalert.min.js"></script>
+<script src="https://s1.socialyze.asia/js/custom.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/app.js?t=1777363824"></script>
+<script src="https://s1.socialyze.asia/js/jasny-bootstrap.js"></script>
+<script src="https://s1.socialyze.asia/plugins/froiden-helper/helper.js"></script>
+<script src="https://s1.socialyze.asia/plugins/bower_components/toast-master/js/jquery.toast.js"></script>
+
+
+<script src="https://s1.socialyze.asia/js/cbpFWTabs.js"></script>
+<script src="https://s1.socialyze.asia/plugins/bower_components/icheck/icheck.min.js"></script>
+<script src="https://s1.socialyze.asia/plugins/bower_components/icheck/icheck.init.js"></script>
+<script src="https://s1.socialyze.asia/js/jquery.magnific-popup.min.js"></script>
+<script src="https://s1.socialyze.asia/js/jquery.magnific-popup-init.js"></script>
+
+
+<script>
+    //reload page if landed via back button
+    if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_BACK_FORWARD) {
+        window.location.reload();
+    }
+
+
+    $('.notificationSlimScroll').slimScroll({
+        height: '250',
+        position: 'right',
+        color: '#dcdcdc'
+    });
+    $('body').on('click', '.timer-modal', function(){
+        var url = 'https://s1.socialyze.asia/admin/all-time-logs/show-active-timer';
+        $('#modelHeading').html('Active Timer');
+        $.ajaxModal('#projectTimerModal',url);
+    });
+
+    $('.datepicker, #start-date, #end-date').on('click', function(e) {
+        e.preventDefault();
+        $(this).attr("autocomplete", "off");
+    });
+
+    var filter =  '';
+    document.addEventListener("keydown", function(event) {
+        if (event.keyCode === 190 && (event.altKey && event.shiftKey)) {
+            $('.ti-angle-double-right').click();
+        }else if (event.keyCode === 84 && (event.altKey && event.shiftKey)) {
+            window.location.href = "https://s1.socialyze.asia/admin/task/all-tasks/create"
+        }else if(event.keyCode === 80 && (event.altKey && event.shiftKey)) {
+            window.location.href = "https://s1.socialyze.asia/admin/projects/create"
+        }
+        if ((filter)){
+             if(event.keyCode === 191 && (event.altKey && event.shiftKey)) {
+                if(localStorage.getItem('filter-'+currentUrl) == 'hide'){
+                    $('.filter-section-show').click();
+                    localStorage.setItem('filter-'+currentUrl, 'show');
+                }
+                else{
+                    $('.filter-section-close').click();
+                    localStorage.setItem('filter-'+currentUrl, 'hide');
+                }
+
+            }
+        }
+
+    });
+
+    function addOrEditStickyNote(id)
+    {
+        var url = '';
+        var method = 'POST';
+        if(id === undefined || id == "" || id == null) {
+            url =  'https://s1.socialyze.asia/admin/sticky-note'
+        } else{
+
+            url = "https://s1.socialyze.asia/admin/sticky-note/:id";
+            url = url.replace(':id', id);
+            var stickyID = $('#stickyID').val();
+            method = 'PUT'
+        }
+
+        var noteText = $('#notetext').val();
+        var stickyColor = $('#stickyColor').val();
+        $.easyAjax({
+            url: url,
+            container: '#responsive-modal',
+            type: method,
+            data:{'notetext':noteText,'stickyColor':stickyColor,'_token':'qeXw7hDvpDPfoCgceiewf2lLTLiGoRJ5z5iyXE3N'},
+            success: function (response) {
+                $("#responsive-modal").modal('hide');
+                getNoteData();
+            }
+        })
+    }
+
+    // FOR SHOWING FEEDBACK DETAIL IN MODEL
+    function showCreateNoteModal(){
+        var url = 'https://s1.socialyze.asia/admin/sticky-note/create';
+
+        $("#responsive-modal").removeData('bs.modal').modal({
+            remote: url,
+            show: true
+        });
+
+        $('#responsive-modal').on('hidden.bs.modal', function () {
+            $(this).find('.modal-body').html('Loading...');
+            $(this).data('bs.modal', null);
+        });
+
+        return false;
+    }
+
+    // FOR SHOWING FEEDBACK DETAIL IN MODEL
+    function showEditNoteModal(id){
+        var url = 'https://s1.socialyze.asia/admin/sticky-note/:id/edit';
+        url  = url.replace(':id',id);
+
+        $("#responsive-modal").removeData('bs.modal').modal({
+            remote: url,
+            show: true
+        });
+
+        $('#responsive-modal').on('hidden.bs.modal', function () {
+            $(this).find('.modal-body').html('Loading...');
+            $(this).data('bs.modal', null);
+        });
+
+        return false;
+    }
+
+    function selectColor(id){
+        $('.icolors li.active ').removeClass('active');
+        $('#'+id).addClass('active');
+        $('#stickyColor').val(id);
+
+    }
+
+
+    function deleteSticky(id){
+
+        swal({
+            title: "Are you sure?",
+            text: "You will not be able to recover the deleted Sticky Note",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel please!",
+            closeOnConfirm: true,
+            closeOnCancel: true
+        }, function(isConfirm){
+            if (isConfirm) {
+
+                var url = "https://s1.socialyze.asia/admin/sticky-note/:id";
+                url = url.replace(':id', id);
+
+                var token = "qeXw7hDvpDPfoCgceiewf2lLTLiGoRJ5z5iyXE3N";
+
+                $.easyAjax({
+                    type: 'POST',
+                    url: url,
+                    data: {'_token': token, '_method': 'DELETE'},
+                    success: function (response) {
+                        $('#stickyBox_'+id).hide('slow');
+                        $("#responsive-modal").modal('hide');
+                        getNoteData();
+                    }
+                });
+            }
+        });
+    }
+
+
+    //getting all chat data according to user
+    function getNoteData(){
+
+        var url = "https://s1.socialyze.asia/admin/sticky-note";
+
+        $.easyAjax({
+            type: 'GET',
+            url: url,
+            messagePosition: '',
+            data:  {},
+            container: ".noteBox",
+            error: function (response) {
+
+                //set notes in box
+                $('#sticky-note-list').html(response.responseText);
+            }
+        });
+    }
+</script>
+
+
+<script>
+    $('.show-user-notifications').click(function () {
+        var token = 'qeXw7hDvpDPfoCgceiewf2lLTLiGoRJ5z5iyXE3N';
+        $.easyAjax({
+            type: 'POST',
+            url: 'https://s1.socialyze.asia/show-admin-notifications',
+            data: {'_token': token},
+            success: function (data) {
+                if (data.status == 'success') {
+                    $('.mailbox').html(data.html);
+                }
+            }
+        });
+
+    });
+
+    $('.mailbox').on('click', '.mark-notification-read', function () {
+        var token = 'qeXw7hDvpDPfoCgceiewf2lLTLiGoRJ5z5iyXE3N';
+        $.easyAjax({
+            type: 'POST',
+            url: 'https://s1.socialyze.asia/mark-notification-read',
+            data: {'_token': token},
+            success: function (data) {
+                if (data.status == 'success') {
+                    $('.top-notifications').remove();
+                    $('.top-notification-count').html('0');
+                    $('#top-notification-dropdown .notify').remove();
+                    $('.notify').remove();
+                }
+            }
+        });
+
+    });
+
+    $('.mailbox').on('click', '.show-all-notifications', function () {
+        var url = 'https://s1.socialyze.asia/show-all-member-notifications';
+        $('#modelHeading').html('View Unread Notifications');
+        $.ajaxModal('#projectTimerModal', url);
+    });
+
+    $('.submit-search').click(function () {
+        $(this).parent().submit();
+    });
+
+    function callAjax(method, url, callback) {
+        var token = "qeXw7hDvpDPfoCgceiewf2lLTLiGoRJ5z5iyXE3N";
+        $.easyAjax({
+            type: ['POST', 'GET'].indexOf(method) ? method : 'POST',
+            url: url,
+            data: {'_token': token, '_method': method},
+            success: function (response) {
+                callback(response);
+            }
+        });
+    }
+
+    $.fn.triggerAjax = function (callback) {
+        let method = $(this).data('method');
+        let url = $(this).data('ajaxUrl');
+        if ($(this).data('confirm') == false) {
+            callAjax(method, url, callback);
+        }else {
+            swal({
+                title: "Are you sure?",
+                text: "You will not be able to recover the deleted package",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonText: "No, cancel please!",
+                closeOnConfirm: true,
+                closeOnCancel: true
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    callAjax(method, url, callback);
+                }
+            });
+        }
+    };
+
+    $(function () {
+        $('.selectpicker').selectpicker();
+    });
+
+    $('.language-switcher').change(function () {
+        var lang = $(this).val();
+        $.easyAjax({
+            url: 'https://s1.socialyze.asia/admin/settings/change-language',
+            data: {'lang': lang},
+            success: function (data) {
+                if (data.status == 'success') {
+                    window.location.reload();
+                }
+            }
+        });
+    });
+
+//    sticky notes script
+    var stickyNoteOpen = $('#open-sticky-bar');
+    var stickyNoteClose = $('#close-sticky-bar');
+    var stickyNotes = $('#footer-sticky-notes');
+    var viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    var stickyNoteHeaderHeight = stickyNotes.height();
+
+    $('#sticky-note-list').css('max-height', viewportHeight-150);
+
+    stickyNoteOpen.click(function () {
+        $('#sticky-note-list').toggle(function () {
+            $(this).animate({
+                height: (viewportHeight-150)
+            })
+        });
+        stickyNoteClose.toggle();
+        stickyNoteOpen.toggle();
+    })
+
+    stickyNoteClose.click(function () {
+        $('#sticky-note-list').toggle(function () {
+            $(this).animate({
+                height: 0
+            })
+        });
+        stickyNoteOpen.toggle();
+        stickyNoteClose.toggle();
+    })
+
+
+
+    $('body').on('click', '.right-side-toggle', function () {
+        $(".right-sidebar").slideDown(50).removeClass("shw-rside");
+    })
+
+
+    function updateOnesignalPlayerId(userId) {
+        $.easyAjax({
+            url: 'https://s1.socialyze.asia/member/profile/updateOneSignalId',
+            type: 'POST',
+            data:{'userId':userId, '_token':'qeXw7hDvpDPfoCgceiewf2lLTLiGoRJ5z5iyXE3N'},
+            success: function (response) {
+            }
+        })
+    }
+
+    $('.table-responsive').on('show.bs.dropdown', function () {
+        $('.table-responsive').css( "overflow", "inherit" );
+    });
+
+    $('.table-responsive').on('hide.bs.dropdown', function () {
+        $('.table-responsive').css( "overflow", "auto" );
+    })
+
+    $('#mobile-filter-toggle').click(function () {
+        $('.filter-section').toggle();
+    })
+
+    $('#sticky-note-toggle').click(function () {
+        $('#footer-sticky-notes').toggle();
+        $('#sticky-note-toggle').hide();
+    })
+
+    $(document).ready(function () {
+        //Side menu active hack
+        setTimeout(function(){
+            var getActiveMenu = $('#side-menu  li.active li a.active').length;
+        // console.log(getActiveMenu);
+            if(getActiveMenu > 0) {
+                $('#side-menu  li.active li a.active').parent().parent().parent().find('a:first').addClass('active');
+            }
+
+         }, 200);
+
+    })
+
+    $('body').on('click', '.toggle-password', function() {
+        var $selector = $(this).parent().find('input.form-control');
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        var $type = $selector.attr("type") === "password" ? "text" : "password";
+        $selector.attr("type", $type);
+    });
+
+    var currentUrl = 'admin.topics.edit';
+    $('body').on('click', '.filter-section-close', function() {
+        localStorage.setItem('filter-'+currentUrl, 'hide');
+
+        $('.filter-section').toggle();
+        $('.filter-section-show').toggle();
+        $('.data-section').toggleClass("col-md-9 col-md-12")
+    });
+
+    $('body').on('click', '.filter-section-show', function() {
+        localStorage.setItem('filter-'+currentUrl, 'show');
+
+        $('.filter-section-show').toggle();
+        $('.data-section').toggleClass("col-md-9 col-md-12")
+        $('.filter-section').toggle();
+    });
+
+    var currentUrl = 'admin.topics.edit';
+    var checkCurrentUrl = localStorage.getItem('filter-'+currentUrl);
+    if (checkCurrentUrl == "hide") {
+        $('.filter-section-show').show();
+        $('.data-section').removeClass("col-md-9")
+        $('.data-section').addClass("col-md-12")
+        $('.filter-section').hide();
+    } else if (checkCurrentUrl == "show") {
+        $('.filter-section-show').hide();
+        $('.data-section').removeClass("col-md-12")
+        $('.data-section').addClass("col-md-9")
+        $('.filter-section').show();
+    }
+</script>
+    <script src="https://s1.socialyze.asia/plugins/bower_components/custom-select/custom-select.min.js"></script>
+    <script src="https://s1.socialyze.asia/plugins/bower_components/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="https://s1.socialyze.asia/plugins/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+    <script src="https://s1.socialyze.asia/plugins/bower_components/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
+    <script src="https://s1.socialyze.asia/plugins/bower_components/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
+    <script src="https://s1.socialyze.asia/plugins/bower_components/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+    <script src="https://s1.socialyze.asia/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+
+    <script>
+        $('#update-topic').click(function(e) {
+            e.preventDefault();
+
+            $('.text-danger').remove();
+            $('.form-control').removeClass('is-invalid');
+
+            $.ajax({
+                url: 'https://s1.socialyze.asia/admin/topics/108',
+                type: 'POST',
+                data: $('#updateTopic').serialize(),
+                success: function(data) {
+
+                    $('#updateTopic').trigger('reset');
+                    toastr.success('Topic updated successfully!', 'Success');
+                    window.location.href = 'https://s1.socialyze.asia/admin/topics';
+
+                },
+                error: function(xhr) {
+                    if (xhr.status === 422) {
+                        let errors = xhr.responseJSON.errors;
+                        for (let key in errors) {
+                            if (key === 'title' || 
+                                key.startsWith('priority_range.Urgent') || 
+                                key.startsWith('priority_range.High') || 
+                                key.startsWith('priority_range.Normal') || 
+                                key.startsWith('priority_range.Low')) {
+
+                                errors[key].forEach(error => {
+                                    toastr.error(error);
+                                });
+                            } else {
+                                let input = $(`[name="${key}"]`);
+                                input.addClass('is-invalid');
+                                input.after(`<span class="text-danger">${errors[key][0]}</span>`);
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+                $('.js-change-alert-status').click(function () {
+            var token = 'qeXw7hDvpDPfoCgceiewf2lLTLiGoRJ5z5iyXE3N';
+            $.easyAjax({
+                url: $(this).data("url") ,
+                type: 'put',
+                data: {_token: token, 'topic_id': $(this).data("topic-id"), 'status': $(this).data("status-type")},
+            })
+        });
+        
+        $("ul.nav-tabs a").click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+
+        $('a[data-toggle="tab"].kw-tab').on('shown.bs.tab', function (e) {
+            const id = $(this).attr('href');
+            if (id === '#advance') {
+                $(this).attr('href', '#basic');
+                $(this).find('small').text('Switch to basic');
+                $(this).closest('.panel-heading').find('#type-kw').val('advance');
+            }else {
+                $(this).attr('href', '#advance');
+                $(this).find('small').text('Switch to advance');
+                $(this).closest('.panel-heading').find('#type-kw').val('basic');
+            }
+        })
+
+        $('#addKW').click(function () {
+            const clone = $('#form-kw').clone();
+            const length = parseInt($('.box-input').last().attr('index')) + 1;
+            clone.removeClass('hidden');
+            clone.attr('index', length);
+            clone.attr('id', 'form-kw-'+length);
+            clone.find('.rm-btn').attr('style', '');
+            clone.find('[name="primary[]"]').attr('name', 'primary['+length+']').addClass('tagsinput');
+            clone.find('[name="secondary[]"]').attr('name', 'secondary['+length+']').addClass('tagsinput');
+            clone.find('[name="exclude[]"]').attr('name', 'exclude['+length+']').addClass('tagsinput');
+            clone.find('.rm-btn').on('click', function () {
+                $('#form-kw-'+length).prev('p').remove();
+                $('#form-kw-'+length).remove();
+                if ($('.box-input').length <= 1) {
+                    $('.basic-form .row > p').remove();
+                }
+                if ($('.basic-form .row').children().first().prop('tagName') === 'P') {
+                    $('.basic-form .row').children().first().remove();
+                }
+            });
+            if (length > 1) {
+                $(this).closest('.actions').before('<p style="color: #337ab7;">OR</p>');
+            }
+            $(this).closest('.actions').before(clone);
+            clone.find('.tagsinput').tagsinput();
+        });
+
+        $('.rm-btn').on('click', function () {
+            $(this).closest('.box-input').prev('p').remove();
+            $(this).closest('.box-input').remove();
+            if ($('.box-input').length <= 1) {
+                $('.basic-form .row > p').remove();
+            }
+            if ($('.basic-form .row').children().first().prop('tagName') === 'P') {
+                $('.basic-form .row').children().first().remove();
+            }
+        });
+
+        $('.tagsinput').tagsinput();
+        $('.select2').select2({
+            formatNoMatches: function () {
+                return 'No record found.';
+            }
+        });
+
+        $(".colorpicker").asColorPicker();
+        $(".complex-colorpicker").asColorPicker({
+            mode: 'complex'
+        });
+        $(".gradient-colorpicker").asColorPicker({
+            mode: 'gradient'
+        });
+        $('.header_color').on('asColorPicker::change', function (e) {
+            document.documentElement.style.setProperty('--header_color', e.target.value);
+        });
+        $('#fromDate').datepicker({
+            format: 'yyyy-mm-dd',
+            //startDate: '-3d'
+        });
+        $('#toDate').datepicker({
+            format: 'yyyy-mm-dd',
+            //startDate: '-3d'
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+
+            function disableAll() {
+                $('input[name="priority_range[High][from]"], input[name="priority_range[High][to]"], input[name="priority_range[Normal][from]"], input[name="priority_range[Normal][to]"], input[name="priority_range[Low][from]"], input[name="priority_range[Low][to]"], input[name="priority_range[Ultimate]from]"], input[name="priority_range[Ultimate][to]"]')
+                    .prop('disabled', true);
+            }
+
+            function disableUrgentHighNormalLow() {
+                $('input[name="priority_range[Urgent][from]"], input[name="priority_range[Urgent][to]"], input[name="priority_range[High][from]"], input[name="priority_range[High][to]"], input[name="priority_range[Normal][from]"], input[name="priority_range[Normal][to]"], input[name="priority_range[Low][from]"], input[name="priority_range[Low][to]"]')
+                    .prop('disabled', true);
+            }
+
+            function disableHighNormalLow() {
+                $('input[name="priority_range[High][from]"], input[name="priority_range[High][to]"], input[name="priority_range[Normal][from]"], input[name="priority_range[Normal][to]"], input[name="priority_range[Low][from]"], input[name="priority_range[Low][to]"]')
+                    .prop('disabled', true);
+            }
+
+            function disableHigh() {
+                $('input[name="priority_range[High][from]"], input[name="priority_range[High][to]"]')
+                    .prop('disabled', true);
+            }
+
+            function disableNormalLow() {
+                $('input[name="priority_range[Normal][from]"], input[name="priority_range[Normal][to]"], input[name="priority_range[Low][from]"], input[name="priority_range[Low][to]"]')
+                    .prop('disabled', true);
+            }
+
+            function disableLow() {
+                $('input[name="priority_range[Low][from]"], input[name="priority_range[Low][to]"]').prop('disabled',
+                    true);
+            }
+
+            function disableNormal() {
+                $('input[name="priority_range[Normal][from]"], input[name="priority_range[Normal][to]"]').prop(
+                    'disabled',
+                    true);
+            }
+
+            function enableAll() {
+                $('input[name="priority_range[High][from]"], input[name="priority_range[High][to]"], input[name="priority_range[Normal][from]"], input[name="priority_range[Normal][to]"], input[name="priority_range[Low][from]"], input[name="priority_range[Low][to]"]')
+                    .prop('disabled', false);
+            }
+
+            function enableNormalLow() {
+                $('input[name="priority_range[Normal][from]"], input[name="priority_range[Normal][to]"], input[name="priority_range[Low][from]"], input[name="priority_range[Low][to]"]')
+                    .prop('disabled', false);
+            }
+
+            function enableLow() {
+                $('input[name="priority_range[Low][from]"], input[name="priority_range[Low][to]"]').prop('disabled',
+                    false);
+            }
+
+            function checkUrgentInputs() {
+                let urgentFrom = $('input[name="priority_range[Urgent][from]"]').val();
+                let urgentTo = $('input[name="priority_range[Urgent][to]"]').val();
+
+                if (!urgentFrom || !urgentTo) {
+                    disableAll();
+                } else {
+                    enableAll();
+                }
+            }
+
+            function checkHighInputs() {
+                let highFrom = $('input[name="priority_range[High][from]"]').val();
+                let highTo = $('input[name="priority_range[High][to]"]').val();
+
+                if (!highFrom || !highTo) {
+                    disableNormalLow();
+                } else {
+                    enableNormalLow();
+                }
+            }
+
+            function checkNormalInputs() {
+                let normalFrom = $('input[name="priority_range[Normal][from]"]').val();
+                let normalTo = $('input[name="priority_range[Normal][to]"]').val();
+
+                if (!normalFrom || !normalTo) {
+                    disableLow();
+                } else {
+                    enableLow();
+                }
+            }
+
+            function validatePriorityRanges() {
+                let urgentFrom = parseInt($('input[name="priority_range[Urgent][from]"]').val());
+                let urgentTo = parseInt($('input[name="priority_range[Urgent][to]"]').val());
+                let highFrom = parseInt($('input[name="priority_range[High][from]"]').val());
+                let highTo = parseInt($('input[name="priority_range[High][to]"]').val());
+                let normalFrom = parseInt($('input[name="priority_range[Normal][from]"]').val());
+                let normalTo = parseInt($('input[name="priority_range[Normal][to]"]').val());
+                let lowFrom = parseInt($('input[name="priority_range[Low][from]"]').val());
+                let lowTo = parseInt($('input[name="priority_range[Low][to]"]').val());
+
+                if (highFrom && highTo && urgentFrom && urgentTo) {
+                    if (highFrom >= urgentFrom || highTo >= urgentFrom) {
+                        toastr.error(
+                            "Khoảng giá trị của mức độ ưu tiên 'High' phải nhỏ hơn khoảng giá trị của 'Urgent'."
+                        );
+                        resetFields('High');
+                        disableNormalLow();
+                        return false;
+                    }
+                }
+
+                if (normalFrom && normalTo && highFrom && highTo && urgentFrom && urgentTo) {
+                    if (normalFrom >= highFrom || normalTo >= highTo || normalFrom >= urgentFrom || normalTo >=
+                        urgentTo) {
+                        toastr.error(
+                            "Khoảng giá trị của mức độ ưu tiên 'Normal' phải nhỏ hơn khoảng giá trị của 'High' và 'Urgent'."
+                        );
+                        resetFields('Normal');
+                        disableLow();
+                        return false;
+                    }
+                }
+
+                if (lowFrom && lowTo && highFrom && highTo && normalFrom && normalTo && urgentFrom && urgentTo) {
+                    if (lowFrom >= normalFrom || lowTo >= normalTo || lowFrom >= highFrom || lowTo >= highTo ||
+                        lowFrom >= urgentFrom || lowTo >= urgentTo) {
+                        toastr.error(
+                            "Khoảng giá trị của mức độ ưu tiên 'Low' phải nhỏ hơn khoảng giá trị của 'Urgent', 'High' và 'Normal'."
+                        );
+                        resetFields('Low');
+                        return false;
+                    }
+                }
+
+                if ((urgentFrom >= urgentTo) || (highFrom >= highTo) || (normalFrom >= normalTo) || (lowFrom >=
+                        lowTo)) {
+                    toastr.error("Giá trị 'from' phải nhỏ hơn giá trị 'to' trong tất cả các mức độ ưu tiên.");
+                    resetFieldsWithError();
+                    return false;
+                }
+
+                return true;
+            }
+
+            function resetFields(priority) {
+                if (priority) {
+                    $(`input[name="priority_range[${priority}][from]"], input[name="priority_range[${priority}][to]"]`)
+                        .val('');
+                } else {
+                    $('input[name="priority_range[Urgent][from]"], input[name="priority_range[Urgent][to]"], input[name="priority_range[High][from]"], input[name="priority_range[High][to]"], input[name="priority_range[Normal][from]"], input[name="priority_range[Normal][to]"], input[name="priority_range[Low][from]"], input[name="priority_range[Low][to]"]')
+                        .val('');
+                }
+            }
+
+            function resetFieldsWithError() {
+                let urgentFrom = $('input[name="priority_range[Urgent][from]"]').val();
+                let urgentTo = $('input[name="priority_range[Urgent][to]"]').val();
+                let highFrom = $('input[name="priority_range[High][from]"]').val();
+                let highTo = $('input[name="priority_range[High][to]"]').val();
+                let normalFrom = $('input[name="priority_range[Normal][from]"]').val();
+                let normalTo = $('input[name="priority_range[Normal][to]"]').val();
+                let lowFrom = $('input[name="priority_range[Low][from]"]').val();
+                let lowTo = $('input[name="priority_range[Low][to]"]').val();
+
+                if (urgentFrom >= urgentTo) {
+                    $('input[name="priority_range[Urgent][from]"], input[name="priority_range[Urgent][to]"]').val(
+                        '');
+                    disableHigh();
+                }
+                if (highFrom >= highTo) {
+                    $('input[name="priority_range[High][from]"], input[name="priority_range[High][to]"]').val('');
+                    disableNormal();
+                }
+                if (normalFrom >= normalTo) {
+                    $('input[name="priority_range[Normal][from]"], input[name="priority_range[Normal][to]"]').val(
+                        '');
+                    disableLow();
+                }
+                if (lowFrom >= lowTo) {
+                    $('input[name="priority_range[Low][from]"], input[name="priority_range[Low][to]"]').val('');
+                }
+            }
+
+            $('input').on('change', function() {
+                checkUrgentInputs();
+                checkHighInputs();
+                checkNormalInputs();
+                validatePriorityRanges();
+            });
+
+            checkUrgentInputs();
+            checkHighInputs();
+            checkNormalInputs();
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('#priority').on('blur', function() {
+                let priorityValue = $(this).val();
+                let topicId = $('#topic_id').val();
+
+                if (priorityValue === '0' || priorityValue === '') {
+                    $('#priority-error').hide();
+                    return;
+                }
+
+                $.ajax({
+                    url: 'https://s1.socialyze.asia/admin/topics/check-priority/data',
+                    method: 'POST',
+                    data: {
+                        priority: priorityValue,
+                        topic_id: topicId,
+                        _token: 'qeXw7hDvpDPfoCgceiewf2lLTLiGoRJ5z5iyXE3N'
+                    },
+                    success: function(response) {
+                        if (response.exists) {
+                            $('#priority-error')
+                            .html(
+                                `<span style="color: red;">
+                                    Mức độ ưu tiên ${priorityValue} đã được sử dụng bởi topic: ${response.topic_title}.<br> 
+                                    Vui lòng chọn một mức ưu tiên khác để đảm bảo topic: ${$('#heading').val()} được xử lý chính xác.
+                                </span>`
+                            )
+                            .show();
+
+                            $('#priority').val('');
+                            $('#update-topic').prop('disabled', true);
+
+                            // setTimeout(function() {
+                            //     $('#priority-error').fadeOut();
+                            // }, 15000);
+                        } else {
+                            $('#priority-error').hide();
+                            $('#update-topic').prop('disabled', false);
+                        }
+                    },
+                    error: function(xhr) {
+                        toastr.error('Có lỗi xảy ra khi kiểm tra mức độ ưu tiên topic');
+                    }
+                });
+            });
+        });
+    </script>
+<script>
+    var checkDatatable = $.fn.DataTable;
+    if(checkDatatable != undefined){
+        checkDatatable.ext.errMode = function (settings, tn, msg) {
+            console.log(settings, tn, msg);
+            if (settings && settings.jqXHR && settings.jqXHR.status == 401) {
+                // Handling for 401 specifically
+                window.location.reload();
+            }
+            else{
+                alert(msg);
+            }
+        };
+    }
+
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"f62bfd2de57a4b9f95e42141d0ab95f8","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
