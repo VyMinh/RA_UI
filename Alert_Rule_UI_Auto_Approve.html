@@ -1105,11 +1105,6 @@
                 </div>
             </div>
             <div class="alert-rule-field">
-                <div class="alert-rule-radio">
-                    <label><input type="radio" name="approval_business_mode" value="manual" checked="checked"> Manual approval</label>
-                </div>
-            </div>
-            <div class="alert-rule-field">
                 <label for="auto_approve_pending_after" class="required">Auto approve pending after</label>
                 <div style="display: flex; align-items: center; gap: 8px;">
                     <input type="number" id="auto_approve_pending_after" name="auto_approve_pending_after" value="2" min="1" step="1" class="form-control">
@@ -1166,56 +1161,6 @@
                 </div>
             </div>
             <div class="help-text outside-period-note">During these periods, the rule uses Auto Approval Mode.</div>
-            </div>
-        </div>
-    </div>
-    <div class="row approval-auto-row">
-        <div class="col-md-12">
-            <div class="approval-auto-panel">
-                <div class="alert-rule-field">
-                    <span class="alert-rule-subtitle">Auto Approve Conditions</span>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="alert-rule-field">
-                            <label>Sentiment score options</label>
-                            <div id="auto-approve-sentiment" data-name="auto_approve_sentiments" data-all-label="All Sentiment Scores" data-selected='["-5","-4","-3","-2","-1","0","1","2","3","4","5"]' class="ar-multiselect">
-                                <button type="button" class="ar-multiselect-btn">All Sentiment Scores</button>
-                                <div class="ar-multiselect-dropdown">
-                                    <label class="ar-ms-option ar-ms-select-all"><input type="checkbox" value="__all__"> Select All</label>
-                                    <label class="ar-ms-option"><input type="checkbox" value="-5" checked="checked"> -5</label>
-                                    <label class="ar-ms-option"><input type="checkbox" value="-4" checked="checked"> -4</label>
-                                    <label class="ar-ms-option"><input type="checkbox" value="-3" checked="checked"> -3</label>
-                                    <label class="ar-ms-option"><input type="checkbox" value="-2" checked="checked"> -2</label>
-                                    <label class="ar-ms-option"><input type="checkbox" value="-1" checked="checked"> -1</label>
-                                    <label class="ar-ms-option"><input type="checkbox" value="0" checked="checked"> 0</label>
-                                    <label class="ar-ms-option"><input type="checkbox" value="1" checked="checked"> 1</label>
-                                    <label class="ar-ms-option"><input type="checkbox" value="2" checked="checked"> 2</label>
-                                    <label class="ar-ms-option"><input type="checkbox" value="3" checked="checked"> 3</label>
-                                    <label class="ar-ms-option"><input type="checkbox" value="4" checked="checked"> 4</label>
-                                    <label class="ar-ms-option"><input type="checkbox" value="5" checked="checked"> 5</label>
-                                </div>
-                            </div>
-                            <div class="help-text">Select sentiment scores applied for auto approve.</div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="alert-rule-field">
-                            <label>Impact</label>
-                            <div id="auto-approve-impact" data-name="auto_approve_impacts" data-all-label="All Impact Levels" data-selected='["low","medium","high","critical","emergency"]' class="ar-multiselect">
-                                <button type="button" class="ar-multiselect-btn">All Impact Levels</button>
-                                <div class="ar-multiselect-dropdown">
-                                    <label class="ar-ms-option ar-ms-select-all"><input type="checkbox" value="__all__"> Select All</label>
-                                    <label class="ar-ms-option"><input type="checkbox" value="low" checked="checked"> Low</label>
-                                    <label class="ar-ms-option"><input type="checkbox" value="medium" checked="checked"> Medium</label>
-                                    <label class="ar-ms-option"><input type="checkbox" value="high" checked="checked"> High</label>
-                                    <label class="ar-ms-option"><input type="checkbox" value="critical" checked="checked"> Critical</label>
-                                    <label class="ar-ms-option"><input type="checkbox" value="emergency" checked="checked"> Emergency</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
